@@ -14,7 +14,8 @@ body{
     background-color: white;
     margin-bottom: 20px;
     border-radius: 0px 0px 10px 10px;
-    box-shadow: 0 15px 15px -5px gray    
+    box-shadow: 0 15px 15px -5px gray;
+    
 }
 .card > p{
     text-align: center;
@@ -57,7 +58,8 @@ padding-bottom: 100px;
    
     text-align: center;
     font-size: 1.5rem; 
-    padding-bottom: 200px
+    padding-bottom: 200px;
+    width: 100vw;
 }
 
 #project-pictures{
@@ -65,8 +67,7 @@ padding-bottom: 100px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(50px, 33%));
     height: 700px;
-
-   
+   width: 100vw;
     border: 1px solid red
     
 }
@@ -94,15 +95,27 @@ padding-bottom: 100px;
 
 
 .navlink:hover{
-    border-bottom: 1px solid white ;
+    border-bottom: 1px solid white;
+}
+
+.card:hover{
+    animation-name: lift;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 
 
-@media screen and (max-width: 600px) {
+@keyframes lift {
+   0%{margin-top: 0;}
+   100%{margin-top: -10px;}
+    
+}
+@media screen and (max-width: 1000px) {
     #project-pictures{
         display:grid;
         grid-template-columns: auto;
+        width: 100%vw;
         height: calc(6 * 400px)
     }
     #project-pictures > img{
